@@ -1,0 +1,20 @@
+package test01_연결스택;
+
+import test00.Node;
+
+public class LinkedStack {
+	public Node head; // top
+	
+	public void addToStart(int data) {
+		// 새로운 노드 만들기
+		Node n = new Node(data);
+		// 현재 첫번째 노드는 head를 통해서만 접근 가능..
+		// 현재 첫번째 노드는 두번째 노드가 되어야 함..
+		// 새로운 노드.next <= 현재 첫번째 노드의 주소값(head)
+		n.next = head;
+		// head가 새로운 노드 가리키도록 하기
+		// head <= 새로운 노드의 주소값
+		head = n;
+	}
+
+}

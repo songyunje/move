@@ -1,0 +1,38 @@
+package test02_연결큐;
+
+import test00.Node;
+
+public class LinkedQueue {
+	public Node head;
+
+	// 뒤에서 삽입
+	public void addToEnd(int data) {
+		// 새로운 노드를 생성
+		Node n = new Node(data);
+		
+		// 리스트가 비어있는지 여부 먼저 체크
+		if(head == null) { // 리스트가 비어있다면
+			head = n;
+		} else {
+			// 가장 마지막 노드 찾기
+			Node curr = head; // 임시 변수 curr에다가 가장 첫번째 노드의 주소값을 저장해 놓고 시작
+			while(curr.next != null) { // 그 다음 노드가 있다면
+				curr = curr.next; // 그 다음 노드로 이동
+			}
+			// while문이 끝났다면?
+			// curr.next == null
+			// curr => 가장 마지막 노드를 가리키고 있는 상태
+			
+			
+			// 가장 마지막 노드의 다음에 새로운 노드를 추가
+			curr.next = n;
+		}
+	}
+	
+	
+	// 앞에서 삭제
+	
+
+
+	
+}

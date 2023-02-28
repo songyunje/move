@@ -1,0 +1,15 @@
+package test02;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Test1 {
+	public static void main(String[] args) {
+		// Queue는 인터페이스
+		// LinkedList를 구현체로 사용
+		Queue<Integer> q = new LinkedList<>();
+		
+		// enQueue => offer()
+		// deQueue => poll()
+	}
+}

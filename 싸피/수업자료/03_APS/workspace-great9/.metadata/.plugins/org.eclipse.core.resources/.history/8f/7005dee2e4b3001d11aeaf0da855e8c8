@@ -1,0 +1,10 @@
+package test02;
+
+public class Test {
+	public static void main(String[] args) {
+		SinglyLinkedList list = new SinglyLinkedList();
+		list.addToEnd(13);
+		list.addToEnd(88);
+		list.addToEnd(39);
+	}
+}

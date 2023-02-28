@@ -1,0 +1,6 @@
+package test02;
+
+public class SinglyLinkedList {
+	// 연결리스트는 head만 저장하고 있으면 됨
+	public Node head;
+}

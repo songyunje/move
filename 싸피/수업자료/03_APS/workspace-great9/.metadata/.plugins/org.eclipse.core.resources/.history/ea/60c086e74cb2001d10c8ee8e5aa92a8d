@@ -1,0 +1,19 @@
+package test01;
+
+// 선형큐 구현
+public class Test1 {
+	public static int[] arr = new int[5]; // n = 5;
+	public static int front = -1, rear = -1;
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	// enQueue(item) : 삽입
+	// deQueue : 삭제
+	// peek : 가장 첫번째 원소 확인(삭제 x)
+	// print : 현재 큐의 원소들 출력
+	// isEmpty : 큐가 비어있는지
+	// isFull : 큐가 꽉차있는지(포화상태인지, 원소를 추가할 수 있는지)
+	// size : 현재 큐의 원소의 개수
+}

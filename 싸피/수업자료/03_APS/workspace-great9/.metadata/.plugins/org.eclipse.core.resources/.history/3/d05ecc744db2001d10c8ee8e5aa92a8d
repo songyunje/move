@@ -1,0 +1,32 @@
+package test01;
+
+// 선형큐 구현
+public class Test1 {
+	public static int n = 5;
+	public static int[] arr = new int[n]; // n = 5;
+	public static int front = -1, rear = -1;
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	// enQueue(item) : 삽입
+	public static void enQueue(int item) {
+		if(rear == n-1) { // 포화상태라면
+			System.out.println("큐에 더이상 값을 넣을 수 없습니다.");
+		} else { // rear != n-1 => 포화상태가 아닌 경우
+			arr[++rear] = item;
+			
+		}
+	}
+	// deQueue : 삭제
+	// peek : 가장 첫번째 원소 확인(삭제 x)
+	// print : 현재 큐의 원소들 출력
+	// isEmpty : 큐가 비어있는지
+	// isFull : 큐가 꽉차있는지(포화상태인지, 원소를 추가할 수 있는지)
+	public static boolean isFull() {
+		return rear == n-1;
+	}
+	
+	// size : 현재 큐의 원소의 개수
+}

@@ -1,0 +1,9 @@
+package test03;
+
+import java.util.PriorityQueue;
+
+public class Test1 {
+	public static void main(String[] args) {
+		PriorityQueue<Person> pq = new PriorityQueue<>();
+	}
+}

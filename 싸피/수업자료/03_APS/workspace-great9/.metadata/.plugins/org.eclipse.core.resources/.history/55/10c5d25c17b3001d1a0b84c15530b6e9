@@ -1,0 +1,12 @@
+package test04;
+
+public class Test1 {
+	
+//	static class Person2 {
+//		
+//	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,7 @@
+package test02;
+
+public class Test1 {
+	public static void main(String[] args) {
+		char[] arr = { '\u0000', 'A', 'B', 'C', 'D', 'E', 'F', 'G' };
+	}
+}

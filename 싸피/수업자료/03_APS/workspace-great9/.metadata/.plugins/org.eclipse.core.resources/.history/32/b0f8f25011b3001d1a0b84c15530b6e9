@@ -1,0 +1,12 @@
+package test01;
+
+// 원형큐
+public class Test1 {
+	public static int n = 5;
+	public static int[] arr = new int[n];
+	public static int front = 0, rear = 0;
+	
+	public static void main(String[] args) {
+		
+	}
+}

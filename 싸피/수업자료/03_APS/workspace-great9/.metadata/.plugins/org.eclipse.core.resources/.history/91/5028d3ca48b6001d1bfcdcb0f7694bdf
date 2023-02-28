@@ -1,0 +1,15 @@
+package test02_연결큐;
+
+import test00.Node;
+
+public class LinkedQueue {
+	public Node head;
+
+	// 뒤에서 삽입
+	
+	// 앞에서 삭제
+	
+
+
+	
+}

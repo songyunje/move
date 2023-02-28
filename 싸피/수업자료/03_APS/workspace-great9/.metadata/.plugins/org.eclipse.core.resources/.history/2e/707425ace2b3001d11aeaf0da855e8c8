@@ -1,0 +1,6 @@
+package test02;
+
+public class Node {
+	public int data;
+	public Node next; // 다음 노드의 주소값
+}

@@ -1,0 +1,13 @@
+package test05;
+
+public class Test {
+	// 내부 클래스
+	static class Person{
+		int num; // 사람의 번호
+		int cnt; // 큐에서 나왔을 때 몇개를 가져갈지??
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

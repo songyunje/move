@@ -1,0 +1,19 @@
+package test01;
+
+// 선형큐 구현
+public class Test1 {
+	public static int[] arr = new int[5]; // n = 5;
+	public static int front = -1, rear = -1;
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	// enQueue(item) : 삽입
+	// deQueue : 삭제
+	// peek : 가장 첫번째 원소 확인
+	// print
+	// isEmpty
+	// isFull
+	// size
+}

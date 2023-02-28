@@ -1,0 +1,35 @@
+1) 
+public class 이진 {
+	public static void main(String[] args) {
+		
+		int[] arr = {1,2,4,6,10,15,20};         
+		
+		if(search(arr,0,6,14)) {                  
+			System.out.println("true");
+		}else {
+			System.out.println("false");
+		}
+		
+	}
+	
+	
+	static boolean search(int[] array,int start,int last, int key) {    
+		if(start>last)
+			return false;
+		
+		int middle = (start+last)/2;
+
+		if(array[middle]==key) {
+			return true;
+		}else if(array[middle]>key) {
+			return search(array,start,middle-1,key);
+		}else {
+			return search(array,middle+1,last,key);
+		}
+	}
+}
+
+2) 이진검색은 검색 자체를 처음부터 끝까지 다 하는 것이 아니라 두 구간으로 나누어 key값이 있는 구간만을 
+   연속해서 검색해 나가는 검색 방식이다. 이 때 start와 last를 합해서 나눈 middle을 기준으로 array를 
+   전반부와 후반부 두 구간으로 나누고 그때의 값과 key값을 비교하여 key값보다 크다면 전반부를, key 값보다 작다면
+   후반부를 다음으로 검색해 나가게 된다. 이 때 array가 정렬되어 있어야만 이진검색을 실시할 수 있다.

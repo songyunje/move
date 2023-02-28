@@ -1,0 +1,42 @@
+package test02_연결큐;
+
+import test00.Node;
+
+public class LinkedQueue {
+	public Node head;
+	
+	public void enQueue(int data) {
+		// 새로운 노드 만들기
+		Node n = new Node(data);
+		// 현재 첫번째 노드는 head를 통해서만 접근 가능..
+		// 현재 첫번째 노드는 두번째 노드가 되어야 함..
+		// 새로운 노드.next <= 현재 첫번째 노드의 주소값(head)
+		n.next = head;
+		// head가 새로운 노드 가리키도록 하기
+		// head <= 새로운 노드의 주소값
+		head = n;
+	}
+	
+	// 가장 마지막 노드 삭제
+		public Node deQueue() {
+			Node curr = head;
+			// 리스트가 비어있거나 1개만 있는 경우
+			if(curr == null || curr.next == null) {
+				head = null;
+				return curr;
+			}
+			
+			// 리스트가 2개 이상인 경우
+			Node nextNode = curr.next;
+			while(curr.next != null) {
+				if(nextNode.next == null) { // nextNode가 마지막 노드이면
+					curr.next = null;
+					break;
+				} // nextNode가 마지막 노드가 아니면
+				curr = curr.next; // curr를 다음노드로
+				nextNode = nextNode.next; // 그 다음노드로
+			}
+			return nextNode;
+		}
+	
+}

@@ -1,0 +1,11 @@
+package test02_private;
+
+public class PersonTest {
+	public static void main(String[] args) {
+		Person p1 = new Person();
+		p1.name = "ㅁ"
+		// 다른 클래스(PersonTest)에 있으므로 접근 불가
+		
+	}
+
+}
