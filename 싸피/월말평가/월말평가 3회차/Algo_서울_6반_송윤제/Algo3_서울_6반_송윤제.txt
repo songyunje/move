@@ -1,0 +1,13 @@
+3-1
+1) o
+2) o
+3) x
+4) x
+5) ㅇ
+
+3-2
+
+bubble sort : O(n2)
+계속 최솟값 구해서 맨 앞이랑 스왑하는 정렬 : O(n2)
+merge sort : O(nlogn)
+quick sort : O(nlogn~n2)
