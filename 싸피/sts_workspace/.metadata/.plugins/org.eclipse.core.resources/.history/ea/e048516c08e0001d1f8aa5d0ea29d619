@@ -1,0 +1,19 @@
+package com.ssafy.ws.test;
+
+
+import java.util.Arrays;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+import com.ssafy.ws.model.dao.MovieDao;
+
+public class MovieTest {
+	public static void main(String[] args) {
+		ApplicationContext context = new GenericXmlApplicationContext("applicationContext.xml");
+//		System.out.println(Arrays.toString(context.getBeanDefinitionNames()));
+		MovieDao moviedao = context.getBean("movieDao", MovieDao.class);
+		
+		System.out.println(moviedao.selectAll());
+	}
+}

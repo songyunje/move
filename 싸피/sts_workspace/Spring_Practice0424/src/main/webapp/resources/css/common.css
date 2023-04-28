@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+header {
+  height: 150px;
+  background-color: white;
+  color: black;
+  line-height: 70px;
+  padding: 0px 30px;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+label {
+	display: inline-block;
+    width: 100px; 
+    text-align: left; 
+ }
+ 
+/* table{
+		border: 2px solid; border-collapse: collapse;
+	}
+th,td{border: 1px solid; width: 150px; text-align: center;} */

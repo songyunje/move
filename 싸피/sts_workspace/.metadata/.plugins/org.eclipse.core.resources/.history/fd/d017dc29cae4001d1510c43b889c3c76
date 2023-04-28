@@ -1,0 +1,51 @@
+package com.ssafy.hw.model.service;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.FileCopyUtils;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.ssafy.hw.model.dao.ProductDao;
+import com.ssafy.hw.model.dto.Product;
+import com.ssafy.hw.model.dto.SearchCondition;
+import com.ssafy.hw.util.PageNavigation;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+	 @Autowired
+	 ProductDao dao;
+
+	@Override
+	public int insertProduct(Product product) {
+		return dao.insertProduct(product);
+	}
+
+	@Override
+	public int updateProduct(Product product) {
+		return dao.updateProduct(product);
+	}
+
+	@Override
+	public int deleteProduct(String pCode) {
+		dao.deleteProduct(pCode);
+	}
+
+	@Override
+	public Product selectProductBypCode(String pCode) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Map<String, Object> selectProductBySearchConditionWithPaging(SearchCondition con) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

@@ -1,0 +1,30 @@
+package com.ssafy.board.model.service;
+
+import java.util.List;
+
+import com.ssafy.board.model.dao.UserDao;
+import com.ssafy.board.model.dto.User;
+
+public class UserServiceImpl implements UserService{
+	private UserDao userdao;
+
+
+	@Override
+	public List<User> getUserList() {
+		return 
+	}
+
+	@Override
+	public void signup(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public User login(String id, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.ssafy.boasrd.model.dao.UserDao">
+ 	<select id="selectAll" resultType="User">
+ 		select
+ 			u.id as id,
+ 			u.password as password,
+ 			u.name as name,
+ 			c.name as cName
+ 		from users u, curriculum c
+ 		where u.curriculum_code = c.code
+ 	</select>
+ 	
+ 	<select id="selectById" parameterType="String" resultType="User">
+ 		select id, password, name
+ 		from users
+ 		where id=#{id}
+ 	</select>
+ 
+ </mapper>

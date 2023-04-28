@@ -1,0 +1,23 @@
+package com.ssafy.ws.test;
+
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+import com.ssafy.ws.model.dao.MovieDao;
+import com.ssafy.ws.model.dto.Movie;
+
+public class MovieTest {
+	public static void main(String[] args) {
+		ApplicationContext context = new GenericXmlApplicationContext("applicationContext.xml");
+//		System.out.println(Arrays.toString(context.getBeanDefinitionNames()));
+		MovieDao moviedao = context.getBean("movieDao", MovieDao.class);
+		
+		moviedao.insert(new movie(0, '기생충', '봉준호', '드라마', 131))
+		List<Movie> list = moviedao.selectAll(); 
+		System.out.println(list);
+	}
+}

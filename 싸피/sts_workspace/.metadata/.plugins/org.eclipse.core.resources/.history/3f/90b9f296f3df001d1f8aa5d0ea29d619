@@ -1,0 +1,48 @@
+package com.ssafy.ws.test;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+import com.ssafy.ws.model.dao.CarDao;
+import com.ssafy.ws.model.dto.Car;
+
+
+public class CarTest {
+	public static void main(String[] args) {
+		ApplicationContext context = new GenericXmlApplicationContext("applicationContext.xml");
+		
+		CarDao cardao = new CarDao() {
+			
+			@Override
+			public List<Car> selectAll() {
+				// TODO Auto-generated method stub
+				return null;
+			}
+			
+			@Override
+			public Car searchByVin(String vin) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+			
+			@Override
+			public List<Car> searchByModelName(String modelName) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+			
+			@Override
+			public int insert(Car car) {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+	};
+	
+	cardao.insert(new Car("vin", "name", "color", 3, "img", "orImg"));
+	
+	Car car1 = cardao.searchByVin("vin");
+	System.out.println(car1.getModelName());
+	}
+}

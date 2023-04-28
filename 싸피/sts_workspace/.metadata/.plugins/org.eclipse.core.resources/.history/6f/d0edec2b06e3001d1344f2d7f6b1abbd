@@ -1,0 +1,18 @@
+package com.ssafy.rest.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/rest1")
+public class TestController {
+	// 메소드를 쭉 작성
+	
+	// http://localhost:8080/mvc/rest1/test1 --> 404 error --> 뷰 리졸버가 저 이름을 뷰네임으로 인식하고 경로를 생성 
+	@GetMapping("/test1")
+	public String test1() {
+		return "hi rest";
+	}
+
+}

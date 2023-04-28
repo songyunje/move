@@ -1,0 +1,25 @@
+package com.ssafy.hw.test;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+import com.ssafy.hw.model.dao.UserDao;
+import com.ssafy.hw.model.dto.User;
+
+public class UserTest {
+	private static SqlSession session;
+	
+	public static void main(String[] args) {
+		ApplicationContext context = new GenericXmlApplicationContext("applicationContext.xml");
+		
+		UserDao dao = context.getBean("userDao",UserDao.class);
+		
+		dao.insert(new User("ssafy1","12341","ssafy1","aaa@1",19));
+		
+		User user1 = dao.searchById("ssafy");
+		
+		System.out.println(user1.getEmail());
+	}
+}

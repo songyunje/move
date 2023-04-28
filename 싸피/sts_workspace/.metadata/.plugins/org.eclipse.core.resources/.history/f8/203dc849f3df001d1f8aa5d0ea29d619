@@ -1,0 +1,12 @@
+package com.ssafy.ws.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+
+public class CarTest {
+	public static void main(String[] args) {
+		ApplicationContext context = new GenericXmlApplicationContext("applicationContext.xml");
+		//코드작성
+	}
+}

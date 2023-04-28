@@ -1,0 +1,8 @@
+package com.ssafy.board.model.dao;
+
+public interface BoardDao {
+	
+	// 전체 게시물 참조
+	public List<Board>
+
+}

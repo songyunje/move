@@ -1,0 +1,19 @@
+package com.ssafy.rest.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/rest4")
+public class TestController4 {
+	
+//	@PathVariable " URL 경로에 있는 값을 파라미터로 추출하겠다.
+//	http://localhost:8080/컨텍스트루트/rest4/board/1
+//	http://localhost:8080/컨텍스트루트/rest4/board/2
+//	http://localhost:8080/컨텍스트루트/rest4/board/99 해당 글의 번호가 들어왔따.
+	@GetMapping("/test1")
+	public String test1() {
+		return "GET";
+	}
+}
