@@ -1,0 +1,26 @@
+DROP DATABASE IF EXISTS ssafy_debug;
+
+CREATE DATABASE ssafy_debug CHARACTER SET=utf8mb4;
+
+USE ssafy_debug;
+
+DROP TABLE IF EXISTS drama;
+
+
+CREATE TABLE `drama` (
+  	`id` INT NOT NULL AUTO_INCREMENT,
+    `title` VARCHAR(100) NOT NULL,
+    `screenwriter` VARCHAR(40) NOT NULL,
+    `director` VARCHAR(40) NOT NULL,
+    `actors` VARCHAR(300) NOT NULL,
+    PRIMARY KEY(`id`)
+)ENGINE=InnoDB;
+
+
+
+INSERT INTO `drama` (title, screenwriter, director, actors)
+VALUES
+('더 글로리', '김은숙', '안길호', '송혜교, 이도현, 임지연, 박성훈, 염혜란, 정성일, 김히어라'),
+('이상한 변호사 우영우', '문지원', '유인식', '박은빈, 강태오, 강기영, 주현영'),
+('오징어 게임', '황동혁', '황동혁', '이정재, 박해수, 오영수, 위하준, 정호연, 허성태, 김주령'),
+('미끼', '김진욱', '김홍선', '장근석, 이엘리야, 허성태');
